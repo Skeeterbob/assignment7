@@ -1,0 +1,47 @@
+#Rev 0 Start 04/04/2022
+##Begin Bryan Hodgins EG0547 Here
+
+def makeDictionary():
+    names = ['joe', 'tom', 'barb', 'sue', 'sally']
+    scores = [10, 23, 13, 18, 12]
+    scoreDict = {}
+    for i in range(len(names)):
+        scoreDict.update([(names[i],int(scores[i]))])
+    while(True):
+        entry = input("Enter a command.\ncommands:\nadd : create new entry\nde\
+lete : remove entry from dictionary\nquery : search for entry by name\nprint :\
+ print the dictionary\nexit : quit program\n")
+        if entry == 'exit':
+            break
+        elif entry == 'query':
+            name = input("Enter the name to search for : ")
+            n = 0
+            for i in scoreDict:
+                n = n + 1
+                if i == name:
+                    print(scoreDict[name])
+                elif n == len(scoreDict):
+                    print("That name does not exist in the dictionary")
+        elif entry == 'add':
+            entryName = input("Enter the name for the new entry : ")
+            entryScore = input("Enter the score for " + entryName + ": ")
+            scoreDict.update([(entryName, entryScore)])
+        elif entry == 'delete':
+            name = input("Enter the name to delete : ")
+            if scoreDict.pop(name, 0) == 0:
+                print("Name doesn't exist in dictionary")
+            else:
+                print(name + " deleted")
+        elif entry == 'print':
+            print(scoreDict)
+            
+                
+def main():
+    makeDictionary()
+
+if __name__=="__main__":
+    main()
+
+#Rev 0 03/03/2022
+##End Bryan Hodgins EG0547 Here
+#Software client / Some Guy / Bryan Hodgins / 7-5

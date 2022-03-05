@@ -1,0 +1,17 @@
+#Rev 0 START 03/02/2022
+## Begin Bryan Hodgins EG0547 Here
+
+def makeDictionary():
+    names = ['joe', 'tom', 'barb', 'sue', 'sally']
+    scores = [10, 23, 13, 18, 12]
+    tempDict = {}
+    for i in range(len(names)):
+        tempDict.update([(names[i],int(scores[i]))])
+    return tempDict
+
+scoreDict = makeDictionary()
+print (scoreDict)
+
+#Rev 0 03/02/2022
+##End Bryan Hodgins EG0547 Here
+# Sofware client / Some Guy / Bryan Hodgins / 7-1

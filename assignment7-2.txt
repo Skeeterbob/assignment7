@@ -1,0 +1,24 @@
+# Rev 0 START 03/03/2022
+## Begin Bryan Hodgins EG0547 Here
+
+def makeDictionary():
+    names = ['joe', 'tom', 'barb', 'sue', 'sally']
+    scores = [10, 23, 13, 18, 12]
+    tempDict = {}
+    for i in range(len(names)):
+        tempDict.update([(names[i],int(scores[i]))])
+    return tempDict
+
+scoreDict = makeDictionary()
+
+while(True):
+    name = input("Enter a name to search for their score (exit to quit): ")
+    if name == 'exit':
+        break
+    for i in scoreDict:
+        if i == name:
+            print(scoreDict[name])
+
+#Rev 0 03/03/2022
+##End Bryan hodgins EG0547 Here
+#Software Client / Some Guy / Bryan Hodgins / 7-2
